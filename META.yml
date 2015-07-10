@@ -33,4 +33,4 @@ resources:
   bugtracker: https://github.com/Zhtwn/DBIx-Class-InflateColumn-DateTime-WithTimeZone/issues
   homepage: https://github.com/Zhtwn/DBIx-Class-InflateColumn-DateTime-WithTimeZone
   repository: https://github.com/Zhtwn/DBIx-Class-InflateColumn-DateTime-WithTimeZone.git
-version: 0.01_03
+version: '0.02'

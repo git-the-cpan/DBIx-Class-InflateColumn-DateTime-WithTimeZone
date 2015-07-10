@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use base 'DBIx::Class::InflateColumn::DateTime';
 
-our $VERSION = '0.01_03';
+our $VERSION = '0.02';
 
 sub register_column {
     my ( $self, $column, $info, @rest ) = @_;
@@ -189,6 +189,12 @@ should work as documented in InflateColumn::DateTime.
 
 =back
 
+=head2 Interaction with TimeStamp
+
+All columns using the TimeStamp plugin will default to using the UTC
+time zone for all time stamps. To use a different time zone, override
+the get_timestamp method and set the desired time zone there.
+
 =head2 Nullable columns
 
 If the datetime column is nullable, the timezone_source column must also
@@ -210,7 +216,8 @@ zoneinfo name. Currently, that's 38 characters, but I can't find
 any guarantee that will not change.
 
 This component does not yet validate the timezone column data type
-or size. This may result in 
+or size. This may result in database exceptions if the time zone
+length is greater than the timezone_source column length.
 
 =head2 Implementation Details
 
