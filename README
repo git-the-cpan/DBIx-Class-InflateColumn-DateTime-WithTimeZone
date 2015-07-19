@@ -166,6 +166,8 @@ TODO
       * Add validation of the data_type and size of the timezone_source
       column
 
+      * Investigate using SQL backend features (e.g., AT TIME ZONE)
+
 AUTHOR
 
     Noel Maddy <zhtwnpanta@gmail.com>
